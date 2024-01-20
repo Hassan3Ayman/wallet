@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--region app_bar-->
+
+    <View
+        android:id="@+id/app_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_left"
+        android:background="#00000000"
+        app:layout_constraintStart_toStartOf="@id/app_bar_container"
+        app:layout_constraintTop_toTopOf="@id/app_bar_container"
+        app:layout_constraintBottom_toBottomOf="@id/app_bar_container"
+        android:contentDescription="back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wallet"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:drawablePadding="8dp"
+        app:layout_constraintStart_toStartOf="@id/app_bar_container"
+        app:layout_constraintEnd_toEndOf="@id/app_bar_container"
+        app:layout_constraintTop_toTopOf="@id/app_bar_container"
+        app:layout_constraintBottom_toBottomOf="@id/app_bar_container"
+        app:drawableEndCompat="@drawable/ic_wallet" />
+
+    <!--endregion app_bar-->
+
+    <!--region cash_container-->
+    <View
+        android:id="@+id/cash_container"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_container"
+        android:background="@drawable/gradient_background_0"/>
+
+    <!--region coin_text_container-->
+    <View
+        android:id="@+id/coin_text_container"
+        android:layout_width="117dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="26dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="12dp"
+        android:background="@drawable/gradient_background_1"
+        app:layout_constraintStart_toStartOf="@id/cash_container"
+        app:layout_constraintTop_toTopOf="@id/cash_container"/>
+    
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/coin"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toStartOf="@id/coin_text_container"
+        app:layout_constraintTop_toTopOf="@id/coin_text_container"
+        app:layout_constraintBottom_toBottomOf="@id/coin_text_container"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="100"
+        app:layout_constraintTop_toTopOf="@id/coin_text_container"
+        app:layout_constraintBottom_toBottomOf="@id/coin_text_container"
+        app:layout_constraintEnd_toEndOf="@id/coin_text_container" />
+
+    <!--endregion coin_text_container-->
+    <!--region cash_out_container-->
+    <View
+        android:id="@+id/cash_out_container"
+        android:layout_width="163dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="29dp"
+        android:background="@drawable/button_background_1"
+        app:layout_constraintTop_toTopOf="@id/coin_text_container"
+        app:layout_constraintBottom_toBottomOf="@id/coin_text_container"
+        app:layout_constraintEnd_toEndOf="@id/cash_container" />
+    <View
+        android:id="@+id/cash_out_container2"
+        android:layout_width="163dp"
+        android:layout_height="52dp"
+        android:background="@drawable/button_background_1"
+        app:layout_constraintStart_toStartOf="@id/cash_out_container"
+        app:layout_constraintTop_toTopOf="@id/cash_out_container"
+        app:layout_constraintEnd_toEndOf="@id/cash_out_container" />
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/money"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="@id/cash_out_container2"
+        app:layout_constraintTop_toTopOf="@id/cash_out_container2"
+        app:layout_constraintBottom_toBottomOf="@id/cash_out_container2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cash_out"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@id/cash_out_container2"
+        app:layout_constraintBottom_toBottomOf="@id/cash_out_container2"
+        app:layout_constraintEnd_toEndOf="@id/cash_out_container2"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="6dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:shadowColor="#000"
+        android:shadowRadius="5"
+        android:shadowDy="2"
+        android:shadowDx="2" />
+
+    <!--endregion cash_out_container-->
+
+    <!--region choices -->
+    <include
+        android:id="@+id/choice_1"
+        android:layout_height="113dp"
+        android:layout_width="83dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="37dp"
+        layout="@layout/choice_card_1"
+        app:layout_constraintStart_toStartOf="@id/cash_container"
+        app:layout_constraintTop_toBottomOf="@id/coin_text_container"
+        app:layout_constraintEnd_toStartOf="@id/choice_2"/>
+    <include
+        android:id="@+id/choice_2"
+        android:layout_height="113dp"
+        android:layout_width="83dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="37dp"
+        layout="@layout/choice_card_2"
+        app:layout_constraintTop_toTopOf="@id/choice_1"
+        app:layout_constraintStart_toEndOf="@id/choice_1"
+        app:layout_constraintBottom_toBottomOf="@id/choice_1"
+        app:layout_constraintEnd_toStartOf="@id/choice_3"
+        app:layout_constraintVertical_bias="1"/>
+    <include
+        android:id="@+id/choice_3"
+        android:layout_height="113dp"
+        android:layout_width="83dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="37dp"
+        layout="@layout/choice_card_3"
+        app:layout_constraintTop_toTopOf="@id/choice_1"
+        app:layout_constraintStart_toEndOf="@id/choice_2"
+        app:layout_constraintBottom_toBottomOf="@id/choice_1"
+        app:layout_constraintVertical_bias="1"/>
+
+    <!--endregion choices -->
+    <!--endregion cash_container-->
+    
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/pay_now"
+        android:textAllCaps="false"
+        android:background="@drawable/button_background_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cash_container"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:shadowRadius="30"
+        android:shadowColor="@color/black"
+        android:shadowDy="10"
+        android:elevation="10dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

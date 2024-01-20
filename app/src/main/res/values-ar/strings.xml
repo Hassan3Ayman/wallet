@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pay_now">ادفع الان</string>
+    <string name="cash_out">المصروفات</string>
+    <string name="wallet">المحفظة</string>
+</resources>
